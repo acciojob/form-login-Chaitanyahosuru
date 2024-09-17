@@ -1,17 +1,8 @@
-function getFormvalue(event) {
-    // Prevent the default form submission
-    event.preventDefault();
-    
-    // Get the form element
-    var form = document.getElementById('form1');
-    
-    // Extract the first and last name values
-    var firstName = form.elements['fname'].value;
-    var lastName = form.elements['lname'].value;
-    
-    // Create the full name string
-    var fullName = firstName + ' ' + lastName;
-    
-    // Display the full name in an alert
+function getFormvalue(e) {
+    e.preventDefault();
+    const form = document.getElementById('form1');
+    const firstName = form.elements['fname'].value.trim();
+    const lastName = form.elements['lname'].value.trim();
+    const fullName = `${firstName} ${lastName}`;
     alert(fullName);
 }
